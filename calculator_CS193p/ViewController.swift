@@ -2,24 +2,48 @@
 //  ViewController.swift
 //  calculator_CS193p
 //
-//  Created by Valerie on 2018. 5. 7..
-//  Copyright © 2018년 Hadalpelagic Zone. All rights reserved.
+//  Created by nellaG on 2018. 5. 7..
+//  Copyright © 2018 Hadalpelagic Zone. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var display: UILabel!
+    var userIsInTheMiddleOfTyping = false
+
+    @IBAction func touchDigit(_ sender: UIButton) {
+        let digit = sender.currentTitle!
+        if userIsInTheMiddleOfTyping {
+            let textCurrentlyInDisplay = display.text!
+            display.text = textCurrentlyInDisplay + digit
+        } else {
+            display.text = digit
+            userIsInTheMiddleOfTyping = true
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // computed property
+    var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
     }
-
-
+    @IBAction func performOperation(_ sender: UIButton) {
+        userIsInTheMiddleOfTyping = false
+        if let mathematicalSymbol = sender.currentTitle {
+            switch mathematicalSymbol {
+                case "π":
+                    displayValue = Double.pi
+                case "√":
+                    displayValue = sqrt(displayValue)
+                default:
+                    print("\(mathematicalSymbol)")
+                    break
+            }
+        }
+    }
 }
-

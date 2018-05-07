@@ -54,14 +54,22 @@
 		3B01127420A04B7C00638AA6 /* calculator_CS193p */ = {
 			isa = PBXGroup;
 			children = (
-				3B01127520A04B7C00638AA6 /* AppDelegate.swift */,
+				3B01128720A04E1500638AA6 /* supporting_files */,
 				3B01127720A04B7C00638AA6 /* ViewController.swift */,
 				3B01127920A04B7C00638AA6 /* Main.storyboard */,
+			);
+			path = calculator_CS193p;
+			sourceTree = "<group>";
+		};
+		3B01128720A04E1500638AA6 /* supporting_files */ = {
+			isa = PBXGroup;
+			children = (
+				3B01127520A04B7C00638AA6 /* AppDelegate.swift */,
 				3B01127C20A04B7F00638AA6 /* Assets.xcassets */,
 				3B01127E20A04B7F00638AA6 /* LaunchScreen.storyboard */,
 				3B01128120A04B7F00638AA6 /* Info.plist */,
 			);
-			path = calculator_CS193p;
+			path = supporting_files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,15 +288,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZG7T92W5JJ;
-				INFOPLIST_FILE = calculator_CS193p/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/calculator_CS193p/supporting_files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "gallen.calculator-CS193p";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,15 +308,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZG7T92W5JJ;
-				INFOPLIST_FILE = calculator_CS193p/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/calculator_CS193p/supporting_files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "gallen.calculator-CS193p";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
